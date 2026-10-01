@@ -62,6 +62,9 @@ PRODUCT_PACKAGES += \
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
 
+#Dolby Atmos
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+
 # Audio Configs
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/holi/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
